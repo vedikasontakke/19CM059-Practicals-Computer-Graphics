@@ -5,10 +5,14 @@
 int main(int argc , char const *argv[])
 {
     int gd = DETECT, gm;
-  
+      // gm is Graphics mode which is a computer display mode that generates image using pixels.
+    // DETECT is a macro defined in "graphics.h" header file
+
+        // initgraph initializes the graphics system by loading a graphics driver from disk
+
     initgraph(&gd, &gm, (char*)"");
   
-    putpixel(50 , 50 , RED);
+    putpixel(170 , 170 , RED);
   
     line(150, 150, 450, 150);
 

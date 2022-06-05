@@ -10,11 +10,15 @@ DDA algorithm.
 int main(int argc , char const *argv[])
 {
 float x1,y1,x2,y2,startx,starty,epsilon;
+    // gm is Graphics mode which is a computer display mode that generates image using pixels.
+    // DETECT is a macro defined in "graphics.h" header file
 int gd=DETECT,gm,i,val,r;
 
 printf("Enter the Radius of the Circle\n");
 scanf("%d",&r);
 detectgraph(&gd,&gm);
+
+    // initgraph initializes the graphics system by loading a graphics driver from disk
 initgraph(&gd,&gm,(char*)"");
 x1=r*cos(0);
 y1=r*sin(0);
@@ -35,7 +39,7 @@ y2=y1-epsilon*x2;
 putpixel(250+x2,250+y2,4);
 x1=x2;
 y1=y2;
-delay(100);
+delay(1000);
 }
 while((y1-starty)<epsilon || (startx-x1)>epsilon);
 getch();

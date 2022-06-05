@@ -7,7 +7,12 @@
 #include<dos.h>  
 void flood(int,int,int,int);  
 int main(int argc , char const *argv[]){  
+
+     // gm is Graphics mode which is a computer display mode that generates image using pixels.
+    // DETECT is a macro defined in "graphics.h" header file
     int gd=DETECT,gm;  
+        
+        // initgraph initializes the graphics system by loading a graphics driver from disk
     initgraph(&gd,&gm,(char*)"");  
     rectangle(50,50,250,250);  
     flood(55,55,10,0);  
